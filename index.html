@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FLORA UGANDA | Protecting People, Land and Climate</title>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+<!--
+  HOW TO CHANGE IMAGES
+  Put your photo in the "images" folder using the SAME file name as below
+  (for example images/slide1.jpg). Until you do, a grey-green placeholder shows.
+  Sizes: slides 1600x700 | mandate 800x520 | climate 800x480 | news 600x300 | report 600x300 | partners 300x140 | logo 200x200
+-->
+<style>
+:root{--g:#0b5d36;--gd:#073b23;--y:#fcdc04;--r:#d90000;--ink:#1a1a1a;--mut:#4a5750;--lt:#f1f5f0;--sage:#dfe8dc;--line:#c9d3cb;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font-family:"Public Sans",system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+h1,h2,h3{font-family:"Source Serif 4",Georgia,serif;line-height:1.25;margin:0}a{color:var(--g)}img{max-width:100%}
+:focus-visible{outline:3px solid #000;outline-offset:2px;box-shadow:0 0 0 5px var(--y)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:var(--y);color:#000;padding:8px 12px;z-index:99}
+.flag{display:flex;height:8px}.flag i{flex:1}.flag i:nth-child(1){background:#000}.flag i:nth-child(2){background:var(--y)}.flag i:nth-child(3){background:var(--r)}
+.top{background:var(--gd);color:#fff;font-size:.85rem}.top .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding-top:7px;padding-bottom:7px}
+.top a{color:#fff;margin-left:14px}.top button{background:none;border:1px solid #fff;color:#fff;margin-left:6px;padding:0 8px;cursor:pointer;font:inherit}
+.brand .wrap{display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:center;padding-top:14px;padding-bottom:14px}
+.brand img{width:68px;height:68px;object-fit:contain;display:block}.brand .nm{text-align:center}.brand h1{font-size:clamp(1.3rem,3vw,2.1rem);color:var(--g)}.brand p{margin:2px 0 0;font-style:italic;color:var(--mut);font-family:"Source Serif 4",serif;font-size:1.1rem}
+.search{display:flex}.search input{border:2px solid var(--g);padding:9px 11px;width:200px;font:inherit}.search button{border:2px solid var(--g);background:var(--g);color:#fff;padding:0 14px;font:inherit;font-weight:600;cursor:pointer}
+nav ul{list-style:none;margin:0;padding:0}nav li{position:relative}nav a{display:block;text-decoration:none}
+.m1{background:var(--g)}.m1>ul{max-width:1180px;margin:0 auto;padding:0 20px;display:flex;flex-wrap:wrap}
+.m1 a{padding:13px 16px;color:#fff;font-weight:500;border-bottom:4px solid var(--g)}.m1 a:hover,.m1 a:focus,.m1 a[aria-current]{background:var(--gd);border-bottom-color:var(--y)}
+.m1 ul ul{display:none;position:absolute;left:0;top:100%;min-width:240px;background:var(--gd);z-index:30}.m1 ul ul ul{left:100%;top:0}
+.m1 li:hover>ul,.m1 li:focus-within>ul{display:block}.m1 ul ul a{font-size:.92rem;border-bottom:1px solid #1f5a3b}
+.m2{background:var(--sage);border-bottom:1px solid var(--line)}.m2>ul{max-width:1180px;margin:0 auto;padding:0 20px;display:flex;flex-wrap:wrap}
+.m2 a{padding:10px 13px;color:var(--gd);font-weight:600;font-size:.9rem}.m2 a:hover,.m2 a:focus{background:var(--g);color:#fff}
+.m2 ul ul{display:none;position:absolute;left:0;top:100%;min-width:220px;background:#fff;border:1px solid var(--line);z-index:30}.m2 li:hover>ul,.m2 li:focus-within>ul{display:block}.m2 ul ul a{font-weight:500}
+.hero{background:#000}.view{overflow:hidden}.slides{display:flex;transition:transform .7s ease}
+.slide{min-width:100%;position:relative;height:min(58vh,480px);min-height:350px}.slide>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cap{position:absolute;left:0;right:0;bottom:0}.cap .box{background:var(--gd);border-top:5px solid var(--y);color:#fff;max-width:560px;padding:20px 24px}
+.cap h2{font-size:clamp(1.3rem,3vw,2rem)}.cap p{margin:8px 0 14px;color:#e4efe7}
+.btn{display:inline-block;background:var(--y);color:#000;font-weight:700;padding:10px 20px;text-decoration:none;border:2px solid var(--y)}.btn:hover{background:#fff;border-color:#fff}
+.btn.g{background:var(--g);color:#fff;border-color:var(--g)}.btn.g:hover{background:var(--gd);border-color:var(--gd)}
+.bar{background:#000}.bar .wrap{display:flex;gap:10px;align-items:center;padding-top:9px;padding-bottom:9px}
+.dots{display:flex;gap:8px;flex:1}.dots button{width:36px;height:8px;border:0;background:#777;cursor:pointer;padding:0}.dots button[aria-current="true"]{background:var(--y)}
+.ar{min-width:40px;height:34px;border:2px solid #fff;background:#000;color:#fff;cursor:pointer}.ar:hover{background:#333}
+.apply{background:var(--y)}.apply .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.apply a{padding:16px 14px;text-align:center;font-weight:700;color:#000;text-decoration:none;border-left:2px solid #000}.apply a:last-child{border-right:2px solid #000}.apply a:hover{background:#000;color:var(--y)}
+section{padding:52px 0}.alt{background:var(--lt);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.t{font-size:1.8rem;color:var(--g);display:inline-block;padding-bottom:8px;border-bottom:4px solid var(--y);margin-bottom:22px}
+.mand{display:grid;grid-template-columns:1.2fr 1fr;gap:36px;align-items:center;margin-bottom:34px}.mand p{font-size:1.1rem;margin:0 0 16px}.mand img{width:100%;height:auto;display:block;border:4px solid var(--g)}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line)}
+.tile{padding:22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}.tile h3{font-size:1.02rem;color:var(--g);margin-bottom:8px}.tile p{margin:0 0 6px}.tile a{font-weight:600}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}.step{background:#fff;border:1px solid var(--line);border-top:5px solid var(--g);padding:18px;position:relative}
+.step::before{counter-increment:s;content:counter(s);position:absolute;top:-18px;left:14px;background:var(--y);color:#000;font-weight:700;width:32px;height:32px;display:grid;place-items:center}
+.step h3{font-size:1.05rem;margin:8px 0 4px}.step p{margin:0;color:var(--mut);font-size:.92rem}
+.reps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.rep{background:#fff;border:1px solid var(--line)}.rep img{display:block;width:100%;height:150px;object-fit:cover}.rep div{padding:12px 14px}.rep h3{font-size:.98rem}.rep time{font-size:.8rem;color:var(--mut)}
+.main{display:grid;grid-template-columns:2fr 1fr;gap:34px}.news{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.nc{background:#fff;border:1px solid var(--line)}.nc img{display:block;width:100%;height:150px;object-fit:cover}.nc div{padding:14px}.nc h3{font-size:1.02rem;margin:3px 0 6px}.nc time{font-size:.8rem;color:var(--mut)}.nc p{margin:0 0 6px;font-size:.9rem;color:var(--mut)}
+.pg{display:flex;gap:6px;margin-top:22px}.pg a{border:2px solid var(--g);padding:4px 12px;text-decoration:none;font-weight:600}.pg a[aria-current]{background:var(--g);color:#fff}
+.side>*{margin-bottom:24px}.box{background:#fff;border:1px solid var(--line);border-top:5px solid var(--g);padding:18px}.box.r{border-top-color:var(--r)}.box h2{font-size:1.2rem;margin-bottom:10px;color:var(--g)}
+.ev{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}.ev .d{background:var(--g);color:#fff;text-align:center;min-width:56px;padding:5px 3px;flex:none}.ev .d b{display:block;font-size:1.35rem;line-height:1.1}.ev .d span{font-size:.75rem}.ev h3{font-size:.95rem}.ev p{margin:0;font-size:.84rem;color:var(--mut)}
+.st{padding:10px 0;border-bottom:1px solid var(--line)}.st b{font-family:"Source Serif 4",serif;font-size:2rem;color:var(--g);display:block;line-height:1.1}.st span{font-size:.88rem;color:var(--mut)}
+.clim{background:var(--g);color:#fff}.clim .wrap{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}.clim img{width:100%;height:auto;display:block;border:4px solid var(--y)}.clim h2{font-size:1.9rem;margin-bottom:10px}.clim p{margin:0 0 16px}
+.pt{display:grid;grid-template-columns:repeat(8,1fr);gap:12px}.pt div{border:1px solid var(--line);background:#fff;height:78px;display:grid;place-items:center;padding:6px}.pt img{max-height:100%;object-fit:contain}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:14px;background:#fff;border:1px solid var(--line);border-top:5px solid var(--r);padding:22px}
+.form label{font-weight:600;display:block;margin-bottom:3px}.form input,.form select,.form textarea{width:100%;font:inherit;padding:9px;border:2px solid #6b7a70;background:#fff;color:var(--ink)}.full{grid-column:1/-1}
+.ok{display:none;background:var(--lt);border-left:6px solid var(--g);padding:12px 16px;font-weight:600}
+footer{background:var(--gd);color:#e1ece4;padding:42px 0 18px;font-size:.92rem}footer .wrap{display:grid;grid-template-columns:repeat(5,1fr);gap:24px}
+footer h3{font-size:1rem;color:var(--y);margin-bottom:10px}footer ul{list-style:none;padding:0;margin:0}footer li{margin:6px 0}footer a{color:#e1ece4}footer p{margin:0 0 8px}
+.copy{grid-column:1/-1;border-top:1px solid #2c6a49;padding-top:14px;margin-top:8px;font-size:.84rem}
+@media (max-width:900px){.m1 ul ul,.m2 ul ul{display:none!important}.brand .wrap{grid-template-columns:1fr;text-align:center;justify-items:center}.apply .wrap,.reps,.steps{grid-template-columns:1fr 1fr}.mand,.main,.clim .wrap,.form,footer .wrap,.news{grid-template-columns:1fr}.tiles{grid-template-columns:1fr 1fr}.pt{grid-template-columns:repeat(4,1fr)}.steps{gap:26px 18px}}
+@media (max-width:520px){.tiles,.reps,.apply .wrap,.steps{grid-template-columns:1fr}.pt{grid-template-columns:repeat(2,1fr)}}
+@media (prefers-reduced-motion:reduce){.slides{transition:none}}
+.logo img {
+    width: 230px !important;
+    height: 130px !important;
+    max-width: none !important;
+    object-fit: contain;
+    display: block;
+}
+/* Annual Reports Section */
+#library .reps {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+}
+
+#library .rep {
+    border: 1px solid #dce5dc;
+    background: #ffffff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#library .rep:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 60, 30, 0.12);
+}
+
+#library .rep img {
+    width: 100%;
+    height: 320px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    background: #f7faf7;
+}
+
+#library .rep > div {
+    padding: 20px;
+}
+
+#library .rep h3 {
+    margin: 0 0 10px;
+    font-size: 19px;
+    line-height: 1.4;
+}
+
+#library .rep time {
+    color: #666;
+    font-size: 15px;
+}
+
+#library .rep a {
+    display: inline-block;
+    margin-top: 12px;
+    color: #087443;
+    font-size: 17px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    #library .reps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    #library .reps {
+        grid-template-columns: 1fr;
+    }
+
+    #library .rep img {
+        height: 350px;
+    }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<div class="flag" aria-hidden="true"><i></i><i></i><i></i></div>
+<div class="top"><div class="wrap"><span>Call : +256744305607 | Tel: +256793533766</span><span><a href="#contact">wilsonkimuli62@gmail.com</a><a href="#report">Report an issue</a><span role="group" aria-label="Text size"><button id="sm" aria-label="Decrease text size">A−</button><button id="lg" aria-label="Increase text size">A+</button></span></span></div></div>
+
+<header class="brand"><div class="wrap">
+<!-- IMAGE: logo -->
+<a href="#" aria-label="FLORA UGANDA, home" class="logo">
+    <img src="logo.png" alt="FLORA UGANDA logo">
+</a>
+<div class="nm"><h1>FLORA UGANDA</h1><p>Protecting people, land and climate</p></div>
+<form class="search" role="search" onsubmit="return false"><label class="skip" for="q">Search</label><input id="q" type="search" placeholder="Search the site"><button>Search</button></form></div></header>
+
+<nav class="m1" aria-label="Main"><ul>
+<li><a href="#" aria-current="page">Home</a></li>
+<li><a href="#mandate">About Us</a><ul><li><a href="#mandate">Who we are</a></li><li><a href="#mandate">Teams</a></li><li><a href="#contact">Regional offices</a></li></ul></li>
+<li><a href="#apply">Services</a><ul>
+<li><a href="#apply">Membership</a><ul><li><a href="#report">Join a community group</a></li><li><a href="#report">Register as a volunteer</a></li></ul></li>
+<li><a href="#apply">Requests</a><ul><li><a href="#report">Request seedlings</a></li><li><a href="#report">Book a training</a></li><li><a href="#report">Request clean-energy support</a></li></ul></li>
+<li><a href="#report">Report an environmental issue</a></li></ul></li>
+<li><a href="#library">Policies and Standards</a><ul><li><a href="#library">Safeguarding policy</a></li><li><a href="#library">Data protection policy</a></li><li><a href="#library">Code of conduct</a></li></ul></li>
+<li><a href="#library">Library</a><ul><li><a href="#library">Maps and atlases</a></li><li><a href="#library">Reports</a></li><li><a href="#library">Publications</a></li></ul></li>
+<li><a href="#contact">Contact Us</a></li></ul></nav>
+<nav class="m2" aria-label="Topics"><ul>
+<li><a href="#mandate">Forests</a></li><li><a href="#mandate">Wetlands</a></li><li><a href="#mandate">Biodiversity</a></li>
+<li><a href="#mandate">Pollution Control</a><ul><li><a href="#mandate">Plastics</a></li><li><a href="#mandate">Household waste</a></li><li><a href="#mandate">Hazardous waste</a></li></ul></li>
+<li><a href="#mandate">Clean Energy</a></li><li><a href="#mandate">Water</a></li>
+<li><a href="#projects">Projects</a><ul><li><a href="#projects">Ongoing projects</a></li><li><a href="#projects">Past projects</a></li></ul></li>
+<li><a href="#library">Research</a></li><li><a href="#news">Champions Awards</a></li><li><a href="#mandate">Community Rangers</a></li></ul></nav>
+
+<main id="main">
+<div class="hero" role="region" aria-roledescription="carousel" aria-label="Highlights"><div class="view"><div class="slides" id="slides">
+<!-- IMAGE: slide1 -->
+<div class="slide" role="group" aria-roledescription="slide" aria-label="1 of 4"><img src="slide1.png" alt="Community members planting tree seedlings">
+<div class="cap"><div class="wrap"><div class="box"><h2>Request seedlings for your community</h2><p>Village groups, schools and churches can apply for indigenous tree seedlings and planting support.</p><a class="btn" href="#report">Apply now</a></div></div></div></div>
+<!-- IMAGE: slide2 -->
+<div class="slide" role="group" aria-roledescription="slide" aria-label="2 of 4"><img src="slide2.jpg" alt="Family with solar lighting at home">
+<div class="cap"><div class="wrap"><div class="box"><h2>Clean energy for every household</h2><p>Solar lighting and efficient stoves cut smoke and save forests.</p><a class="btn" href="#mandate">Explore clean energy</a></div></div></div></div>
+<!-- IMAGE: slide3 -->
+<div class="slide" role="group" aria-roledescription="slide" aria-label="3 of 4"><img src="spring2.jpg" alt="Community collecting clean water from a protected source">
+<div class="cap"><div class="wrap"><div class="box"><h2>Safe water and healthy wetlands</h2><p>Protected springs and rivers keep communities healthy.</p><a class="btn" href="#process">How restoration works</a></div></div></div></div>
+<!-- IMAGE: slide4 -->
+<div class="slide" role="group" aria-roledescription="slide" aria-label="4 of 4"><img src="treeplanting.jpg" alt="School children planting a tree">
+<div class="cap"><div class="wrap"><div class="box"><h2>School greening through tree growing</h2><p>Students plant and care for trees, and teach their neighbours.</p><a class="btn" href="#news">Read the story</a></div></div></div></div>
+</div></div>
+<div class="bar"><div class="wrap"><div class="dots" id="dots"></div><button class="ar" id="prev" aria-label="Previous slide">&#8249;</button><button class="ar" id="pp" aria-label="Pause slideshow">&#10074;&#10074;</button><button class="ar" id="next" aria-label="Next slide">&#8250;</button></div></div></div>
+
+<div class="apply" id="apply"><div class="wrap"><a href="#report">JOIN A GROUP</a><a href="#report">REQUEST SEEDLINGS</a><a href="#report">BOOK A TRAINING</a><a href="#report">REPORT AN ISSUE</a></div></div>
+
+<section id="mandate"><div class="wrap">
+<div class="mand"><div><h2 class="t">Our mandate</h2><p>Green Africa is a community-based organisation that helps villages, schools and local leaders protect forests, wetlands, water and climate. We train and connect local groups so the people closest to the land lead its protection.</p><a class="btn g" href="#library">Read our State of the Environment report</a></div>
+<!-- IMAGE: mandate -->
+<img src="spring.jpg" alt="Spring restoration in Villages"></div>
+<div class="tiles">
+<div class="tile"><h3>FOREST PROTECTION</h3><p>Community nurseries, planting and forest watch.</p><a href="#news">more</a></div>
+<div class="tile"><h3>WETLANDS AND RIVERBANKS</h3><p>Restoring wetlands, rivers and lakeshores.</p><a href="#process">more</a></div>
+<div class="tile"><h3>CLEAN ENERGY</h3><p>Solar lighting and efficient stoves.</p><a href="#news">more</a></div>
+<div class="tile"><h3>CLIMATE-SMART LAND USE</h3><p>Agroforestry, soil care and hillside farming.</p><a href="#news">more</a></div>
+<div class="tile"><h3>WASTE AND PLASTICS</h3><p>Clean-ups, recycling and plastic reduction.</p><a href="#news">more</a></div>
+<div class="tile"><h3>INFORMATION AND LITERACY</h3><p>School clubs and public awareness.</p><a href="#news">more</a></div></div>
+</div></section>
+
+<section id="process" class="alt"><div class="wrap"><h2 class="t">Wetland restoration process</h2>
+<div class="steps"><div class="step"><h3>Community awareness</h3><p>Meetings explain why the wetland matters.</p></div><div class="step"><h3>Mapping and assessment</h3><p>Groups and officers map boundaries and damage.</p></div><div class="step"><h3>Agreement and plan</h3><p>The community agrees what will be restored and who leads.</p></div><div class="step"><h3>Restoration</h3><p>Planting, protection and regular monitoring.</p></div></div></div></section>
+
+<section id="library"><div class="wrap"><h2 class="t">Annual reports</h2><div class="reps">
+<!-- IMAGES: report1 to report4 -->
+<article class="rep"><img src="proposal.png" alt="Funding proposal 2026/2027 cover"><div><h3>Funding proposal to Africa Youth Climate Fund2026/2027</h3><time>20/November/2026</time><br><a href="#">Read more</a></div></article>
+<article class="rep"><img src="report2-2024-2025.png" alt="Annual report 2024/2025 cover"><div><h3>Annual Report 2024/2025</h3><time>1 November 2025</time><br><a href="#">Read more</a></div></article>
+<article class="rep"><img src="report3-2023-2024.png" alt="Annual report 2023/2024 cover"><div><h3>Annual Report 2023/2024</h3><time>1 November 2024</time><br><a href="#">Read more</a></div></article>
+<article class="rep"><img src="report4-2022-2023.png" alt="Annual report 2022/2023 cover"><div><h3>Annual Report 2022/2023</h3><time>14 September 2023</time><br><a href="#">Read more</a></div></article></div></div></section>
+
+<section id="news" class="alt"><div class="wrap main"><div><h2 class="t">Latest news updates</h2><div class="news">
+<!-- IMAGES: news1 to news6 -->
+<article class="nc"><img src="slide2.jpg" alt="Setting up energy saving locally built stoves for community members"><div><time>28 October 2026</time><h3>10 village members were assisted to setup energy saving stoves at their homes</h3><p>Energy saving stoves will help reduce massive cutting down of trees for excssive firewood and charcoal.</p><a href="#">Read more</a></div></article>
+<article class="nc"><img src="slide3.png" alt="Pupils planting trees at school"><div><time>28 October 2026</time><h3>Schools lead greening through tree growing</h3><p>Pupils plant and care for trees in school compounds.</p><a href="#">Read more</a></div></article>
+<article class="nc"><img src="Garbage-in-water-channels.jpg" alt="Community meeting beside a river"><div><time>12 October 2026</time><h3>Collective effort begins to restore a river</h3><p>Communities and partners agree a plan to protect the river and its banks.</p><a href="#">Read more</a></div></article>
+<article class="nc"><img src="images/news4.jpg " alt="Waste collection in a community"><div><time>24 September 2026</time><h3>Community waste database launched</h3><p>A shared database will help groups track and manage household waste.</p><a href="#">Read more</a></div></article>
+<article class="nc"><img src="images/news5.jpg" alt="Officials at a training workshop"><div><time>17 September 2026</time><h3>District officials trained on payment for ecosystem services</h3><p>A workshop shows how communities can be rewarded for protecting nature.</p><a href="#">Read more</a></div></article>
+<article class="nc"><img src="images/news6.jpg" alt="Community rangers at a pass-out parade"><div><time>4 September 2026</time><h3>Community rangers pass out</h3><p>Fifty-five new rangers will help communities guard forests and wetlands.</p><a href="#">Read more</a></div></article></div>
+<nav class="pg" aria-label="News pages"><a href="#" aria-current="page">1</a><a href="#">2</a><a href="#">3</a><a href="#">Next</a></nav></div>
+<aside class="side" aria-label="Sidebar">
+<div class="box r"><h2>Feedback and complaints</h2><p style="margin:0">To raise a concern about the conduct of our staff or partners, write to florauganda.org@gmail.com</p></div>
+<div class="box"><h2>Upcoming events</h2>
+<div class="ev"><div class="d"><b>05</b><span>Dec</span></div><div><h3>Community tree-planting day</h3><p>Venue to be confirmed</p></div></div>
+<div class="ev"><div class="d"><b>12</b><span>Dec</span></div><div><h3>Clean energy training</h3><p>Venue to be confirmed</p></div></div>
+<div class="ev"><div class="d"><b>18</b><span>Jan</span></div><div><h3>Annual community forum</h3><p>Venue to be confirmed</p></div></div></div>
+<div class="box"><h2>Our statistics</h2><div class="st"><b>120,000</b><span>trees planted</span></div><div class="st"><b>85</b><span>community groups</span></div><div class="st"><b>50</b><span>homes with clean energy</span></div></div></aside></div></section>
+
+<section class="clim"><div class="wrap"><div><h2>Climate change</h2><p>Communities already feel changing rains, longer droughts and floods. Green Africa helps local groups adapt, cut emissions and protect the ecosystems that protect them.</p><a class="btn" href="#library">Read more</a></div>
+<!-- IMAGE: climate -->
+<img src="swamp drainage.jpg" alt="We aim to fight environmental exploitaion and illegal practices that destroy the environment"></div></section>
+
+<section id="projects"><div class="wrap"><h2 class="t">Join the action for a sustainable, greener future</h2><h3 style="margin:0 0 14px;font-size:1.2rem">Our partners</h3><div class="pt">
+<!-- IMAGES: partner1 to partner8 (logos) -->
+<div><img src="images/partner1.png" alt="Partner 1"></div><div><img src="images/partner2.png" alt="Partner 2"></div><div><img src="images/partner3.png" alt="Partner 3"></div><div><img src="images/partner4.png" alt="Partner 4"></div>
+<div><img src="images/partner5.png" alt="Partner 5"></div><div><img src="images/partner6.png" alt="Partner 6"></div><div><img src="images/partner7.png" alt="Partner 7"></div><div><img src="images/partner8.png" alt="Partner 8"></div></div></div></section>
+
+
+<section class="alt" id="report">
+  <div class="wrap">
+
+    <h2 class="t">Report an environmental issue</h2>
+
+    <form
+      class="form"
+      id="contactForm"
+      action="https://formspree.io/f/xljbolen"
+      method="POST"
+    >
+
+      <!-- Full name -->
+      <div>
+        <label for="n">Full name *</label>
+        <input
+          id="n"
+          type="text"
+          name="Full Name"
+          required
+          autocomplete="name"
+        >
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label for="e">Email *</label>
+        <input
+          id="e"
+          type="email"
+          name="email"
+          required
+          autocomplete="email"
+        >
+      </div>
+
+      <!-- Request type -->
+      <div>
+        <label for="k">Request type *</label>
+        <select id="k" name="Request Type" required>
+          <option value="">Select</option>
+          <option>Join a community group</option>
+          <option>Request seedlings</option>
+          <option>Book a training</option>
+          <option>Report illegal logging</option>
+          <option>Report dumping or pollution</option>
+        </select>
+      </div>
+
+      <!-- Location -->
+      <div>
+        <label for="l">Location *</label>
+        <input
+          id="l"
+          type="text"
+          name="Location"
+          required
+        >
+      </div>
+
+      <!-- Details -->
+      <div class="full">
+        <label for="m">Details *</label>
+        <textarea
+          id="m"
+          name="Details"
+          rows="4"
+          required
+        ></textarea>
+      </div>
+
+      <!-- Consent -->
+      <div class="full">
+        <label>
+          <input
+            type="checkbox"
+            name="Consent"
+            value="Agreed"
+            required
+            style="width:auto"
+          >
+          I agree to Green Africa using my details to respond. *
+        </label>
+      </div>
+
+      <!-- Email subject -->
+      <input
+        type="hidden"
+        name="_subject"
+        value="New Environmental Issue Report"
+      >
+
+      <!-- Spam protection -->
+      <input
+        type="text"
+        name="_gotcha"
+        style="display:none"
+        tabindex="-1"
+        autocomplete="off"
+      >
+
+      <!-- Submit -->
+      <div class="full">
+        <button class="btn g" type="submit" id="sendBtn">
+          Send Report
+        </button>
+      </div>
+
+      <!-- Success message -->
+      <div class="full ok" id="ok" role="status"
+           style="display:none;">
+        Thank you! Your report has been submitted successfully.
+        We will contact you through the email provided.
+      </div>
+
+      <!-- Error message -->
+      <div class="full" id="errorMsg" role="alert"
+           style="display:none;color:red;">
+        Something went wrong. Please try again.
+      </div>
+
+    </form>
+
+  </div>
+</section>
+</main>
+
+
+<footer id="contact"><div class="wrap">
+<div><h3>News and Media</h3><ul><li><a href="#news">Press releases</a></li><li><a href="#news">Announcements</a></li><li><a href="#news">Public notices</a></li><li><a href="#news">Gallery</a></li></ul></div>
+<div><h3>Opportunities</h3><ul><li><a href="#">Jobs and careers</a></li><li><a href="#">Internships and volunteering</a></li><li><a href="#">Bids and tenders</a></li><li><a href="#">Grants</a></li></ul></div>
+<div><h3>Quick links</h3><ul><li><a href="#apply">Online services</a></li><li><a href="#library">Forms</a></li><li><a href="#mandate">Teams</a></li><li><a href="#">FAQs</a></li><li><a href="#">Accessibility</a></li></ul></div>
+<div><h3>Campaigns</h3><ul><li><a href="#">Wetland awareness</a></li><li><a href="#">Plastic-free villages</a></li><li><a href="#">Plant a tree</a></li><li><a href="#">Clean water week</a></li></ul></div>
+<div><h3>Contacts</h3><p>florauganda.org@gmail.com</p><p>+256766587965</p><p>+256793533766</p><p>Kitebere - kanyanda- Makulubita - Luwero <br>Uganda</p></div>
+<div class="copy">Copyright © 2026 Flora Uganda.org. All rights reserved.</div></div></footer>
+
+<script>
+/* Shows a placeholder from images/placeholders/ whenever your own image file is missing */
+document.addEventListener('error',function(e){var t=e.target;if(t.tagName==='IMG'&&!t.dataset.f){t.dataset.f=1;t.src='images/placeholders/'+t.getAttribute('src').split('/').pop().replace(/\.\w+$/,'')+'.svg'}},true);
+(function(){
+var s=document.getElementById('slides'),n=s.children.length,i=0,play=!matchMedia('(prefers-reduced-motion: reduce)').matches,t,d=document.getElementById('dots'),pp=document.getElementById('pp'),h=document.querySelector('.hero');
+for(var k=0;k<n;k++){(function(k){var b=document.createElement('button');b.setAttribute('aria-label','Go to slide '+(k+1));b.onclick=function(){go(k);start()};d.appendChild(b)})(k)}
+function go(x){i=(x+n)%n;s.style.transform='translateX(-'+(i*100)+'%)';[].forEach.call(d.children,function(b,j){b.setAttribute('aria-current',j===i)})}
+function start(){clearInterval(t);if(play)t=setInterval(function(){go(i+1)},6000)}
+document.getElementById('prev').onclick=function(){go(i-1);start()};document.getElementById('next').onclick=function(){go(i+1);start()};
+pp.onclick=function(){play=!play;pp.innerHTML=play?'&#10074;&#10074;':'&#9654;';pp.setAttribute('aria-label',play?'Pause slideshow':'Play slideshow');start()};
+h.addEventListener('mouseenter',function(){clearInterval(t)});h.addEventListener('mouseleave',start);h.addEventListener('focusin',function(){clearInterval(t)});go(0);start();
+var sz=100;function fs(x){sz=Math.max(85,Math.min(130,sz+x));document.documentElement.style.fontSize=sz+'%'}
+document.getElementById('sm').onclick=function(){fs(-10)};document.getElementById('lg').onclick=function(){fs(10)};
+document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();var f=e.target,bad=[].filter.call(f.querySelectorAll('[required]'),function(x){return x.type==='checkbox'?!x.checked:!x.value.trim()});
+if(bad.length){bad[0].focus();alert('Please complete all required fields.');return}document.getElementById('ok').style.display='block';f.reset()});
+})();
+
+document.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+    alert('Right-click is disabled on this website.');
+});
+</script>
+</body>
+</html>
