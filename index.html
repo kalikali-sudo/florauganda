@@ -440,30 +440,207 @@ footer h3{font-size:1rem;color:var(--y);margin-bottom:10px}footer ul{list-style:
 <div><h3>Contacts</h3><p>florauganda.org@gmail.com</p><p>+256766587965</p><p>+256793533766</p><p>Kitebere - kanyanda- Makulubita - Luwero <br>Uganda</p></div>
 <div class="copy">Copyright © 2026 Flora Uganda.org. All rights reserved.</div></div></footer>
 
-<script>
-/* Shows a placeholder from images/placeholders/ whenever your own image file is missing */
-document.addEventListener('error',function(e){var t=e.target;if(t.tagName==='IMG'&&!t.dataset.f){t.dataset.f=1;t.src='images/placeholders/'+t.getAttribute('src').split('/').pop().replace(/\.\w+$/,'')+'.svg'}},true);
-(function(){
-var s=document.getElementById('slides'),n=s.children.length,i=0,play=!matchMedia('(prefers-reduced-motion: reduce)').matches,t,d=document.getElementById('dots'),pp=document.getElementById('pp'),h=document.querySelector('.hero');
-for(var k=0;k<n;k++){(function(k){var b=document.createElement('button');b.setAttribute('aria-label','Go to slide '+(k+1));b.onclick=function(){go(k);start()};d.appendChild(b)})(k)}
-function go(x){i=(x+n)%n;s.style.transform='translateX(-'+(i*100)+'%)';[].forEach.call(d.children,function(b,j){b.setAttribute('aria-current',j===i)})}
-function start(){clearInterval(t);if(play)t=setInterval(function(){go(i+1)},6000)}
-document.getElementById('prev').onclick=function(){go(i-1);start()};document.getElementById('next').onclick=function(){go(i+1);start()};
-pp.onclick=function(){play=!play;pp.innerHTML=play?'&#10074;&#10074;':'&#9654;';pp.setAttribute('aria-label',play?'Pause slideshow':'Play slideshow');start()};
-h.addEventListener('mouseenter',function(){clearInterval(t)});h.addEventListener('mouseleave',start);h.addEventListener('focusin',function(){clearInterval(t)});go(0);start();
-var sz=100;function fs(x){sz=Math.max(85,Math.min(130,sz+x));document.documentElement.style.fontSize=sz+'%'}
-document.getElementById('sm').onclick=function(){fs(-10)};document.getElementById('lg').onclick=function(){fs(10)};
-document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();var f=e.target,bad=[].filter.call(f.querySelectorAll('[required]'),function(x){return x.type==='checkbox'?!x.checked:!x.value.trim()});
-if(bad.length){bad[0].focus();alert('Please complete all required fields.');return}document.getElementById('ok').style.display='block';f.reset()});
-})();
 
-document.addEventListener('contextmenu', function(event) {
-    event.preventDefault();
-    alert('Right-click is disabled on this website.');
-});
-  document.addEventListener('contextmenu', function(e) {
+<script>
+/* Shows a placeholder whenever an image file is missing */
+document.addEventListener('error', function(e) {
+    var t = e.target;
+
+    if (t.tagName === 'IMG' && !t.dataset.f) {
+        t.dataset.f = 1;
+        t.src = 'images/placeholders/' +
+            t.getAttribute('src').split('/').pop().replace(/\.\w+$/, '') + '.svg';
+    }
+}, true);
+
+
+/* DISABLE RIGHT-CLICK ON THE WEBSITE */
+document.addEventListener('contextmenu', function(e) {
     e.preventDefault();
+    alert('Right-click is disabled on this website.');
+    return false;
 });
+
+
+/* DISABLE COMMON DEVELOPER AND SOURCE VIEW SHORTCUTS */
+document.addEventListener('keydown', function(e) {
+    var key = e.key.toUpperCase();
+
+    if (
+        key === 'F12' ||
+        (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(key)) ||
+        (e.ctrlKey && key === 'U')
+    ) {
+        e.preventDefault();
+        alert('This keyboard shortcut is disabled on this website.');
+        return false;
+    }
+});
+
+
+/* SLIDESHOW, ACCESSIBILITY AND CONTACT FORM */
+(function() {
+
+    var s = document.getElementById('slides'),
+        n = s.children.length,
+        i = 0,
+        play = !matchMedia('(prefers-reduced-motion: reduce)').matches,
+        t,
+        d = document.getElementById('dots'),
+        pp = document.getElementById('pp'),
+        h = document.querySelector('.hero');
+
+
+    /* Create slideshow navigation dots */
+    for (var k = 0; k < n; k++) {
+        (function(k) {
+            var b = document.createElement('button');
+
+            b.setAttribute('aria-label', 'Go to slide ' + (k + 1));
+
+            b.onclick = function() {
+                go(k);
+                start();
+            };
+
+            d.appendChild(b);
+        })(k);
+    }
+
+
+    /* Change slide */
+    function go(x) {
+        i = (x + n) % n;
+
+        s.style.transform = 'translateX(-' + (i * 100) + '%)';
+
+        [].forEach.call(d.children, function(b, j) {
+            b.setAttribute('aria-current', j === i);
+        });
+    }
+
+
+    /* Start slideshow */
+    function start() {
+        clearInterval(t);
+
+        if (play) {
+            t = setInterval(function() {
+                go(i + 1);
+            }, 6000);
+        }
+    }
+
+
+    /* Previous slide */
+    document.getElementById('prev').onclick = function() {
+        go(i - 1);
+        start();
+    };
+
+
+    /* Next slide */
+    document.getElementById('next').onclick = function() {
+        go(i + 1);
+        start();
+    };
+
+
+    /* Pause and play slideshow */
+    pp.onclick = function() {
+        play = !play;
+
+        pp.innerHTML = play ? '&#10074;&#10074;' : '&#9654;';
+
+        pp.setAttribute(
+            'aria-label',
+            play ? 'Pause slideshow' : 'Play slideshow'
+        );
+
+        start();
+    };
+
+
+    /* Pause slideshow when mouse enters hero */
+    h.addEventListener('mouseenter', function() {
+        clearInterval(t);
+    });
+
+
+    /* Resume slideshow when mouse leaves hero */
+    h.addEventListener('mouseleave', start);
+
+
+    /* Pause slideshow when keyboard enters hero */
+    h.addEventListener('focusin', function() {
+        clearInterval(t);
+    });
+
+
+    /* Initialise slideshow */
+    go(0);
+    start();
+
+
+    /* ACCESSIBILITY FONT SIZE CONTROLS */
+    var sz = 100;
+
+    function fs(x) {
+        sz = Math.max(85, Math.min(130, sz + x));
+
+        document.documentElement.style.fontSize = sz + '%';
+    }
+
+
+    /* Decrease font size */
+    document.getElementById('sm').onclick = function() {
+        fs(-10);
+    };
+
+
+    /* Increase font size */
+    document.getElementById('lg').onclick = function() {
+        fs(10);
+    };
+
+
+    /* CONTACT FORM VALIDATION */
+    document.getElementById('f').addEventListener('submit', function(e) {
+
+        e.preventDefault();
+
+        var f = e.target,
+
+            bad = [].filter.call(
+                f.querySelectorAll('[required]'),
+
+                function(x) {
+                    return x.type === 'checkbox'
+                        ? !x.checked
+                        : !x.value.trim();
+                }
+            );
+
+
+        /* Check required fields */
+        if (bad.length) {
+            bad[0].focus();
+
+            alert('Please complete all required fields.');
+
+            return;
+        }
+
+
+        /* Display success message */
+        document.getElementById('ok').style.display = 'block';
+
+        f.reset();
+
+    });
+
+})();
 </script>
+
 </body>
 </html>
